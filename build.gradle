@@ -1,0 +1,151 @@
+apply plugin: 'java'
+
+sourceSets.main.java.srcDirs = ['src']
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
+
+jar {
+    from('src') {
+        include '*.yml'
+    }
+}
+
+def pluginName = "HumineStaff"
+
+def mcServerVersion = "1.14.2"
+
+def mcServerFileName = "spigot-${mcServerVersion}.jar"
+def serverDir = "server"
+def binDir = "${serverDir}/bin"
+
+def updateVersionF(String value) {
+    String updateValue = ""
+    for (int i = value.replace('.', ' ').split(' ').size() -1 ; i >= 0 ; i--) {
+        if (i == value.replace('.', ' ').split(' ').size() -1)
+            updateValue = (Integer.parseInt(value.replace('.', ' ').split(' ')[i]) + 1) + (( updateValue != "") ? ".${updateValue}" : "")
+        else
+            updateValue = value.replace('.', ' ').split(' ')[i] + (( updateValue != "") ? ".${updateValue}" : "")
+    }
+
+    return updateValue
+
+}
+
+def getPluginVersion() {
+    def file = file 'src/plugin.yml'
+    for (int i = 0; i < file.readLines().size(); i++) {
+        def line = file.readLines().get(i).split(": ")
+        if (line[0].equals("version")) {
+           return line[1]
+        }
+    }
+}
+
+task updateVersion {
+    doLast {
+        def file = file 'src/plugin.yml'
+        def allLine = new String[file.readLines().size()]
+        for (int i = 0; i < file.readLines().size(); i++) {
+            def line = file.readLines().get(i).split(": ")
+            if (line[0].equals("version")) {
+                 allLine[i] = line[0] + ": " + updateVersionF(line[1])
+            } else {
+                allLine[i] = file.readLines().get(i)
+            }
+        }
+        delete file
+        file.createNewFile()
+        String value = ""
+        for (int i = 0 ; i < allLine.length ; i++) {
+            value += allLine[i]+"\n"
+            println value
+        }
+        file.write(value)
+
+    }
+}
+
+task buildPlugin(type: Copy) {
+    dependsOn build
+    from ('build/libs')
+    include "${pluginName}.jar"
+    destinationDir file('output')
+    rename "${pluginName}.jar", "${pluginName}-${getPluginVersion()}.jar"
+    finalizedBy updateVersion
+}
+
+task fullCleanProject {
+    dependsOn clean
+    doLast {
+        delete 'plugins'
+        delete 'server'
+        delete 'output'
+    }
+}
+
+task copyLibs(type: Copy) {
+    from ('libs/') {
+        exclude "${mcServerFileName}"
+    }
+    into 'plugins/'
+}
+
+task servePlugin(type: Copy) {
+    dependsOn build
+    dependsOn copyLibs
+    from "$buildDir/libs/${pluginName}.jar"
+    into 'plugins/'
+}
+
+task copyPlugins(type: Copy) {
+    dependsOn servePlugin
+    from 'plugins/'
+    into 'server/plugins/'
+}
+
+task copyServer(type: Copy) {
+    from "libs/${mcServerFileName}"
+    into binDir
+}
+
+task createEula() {
+    doLast {
+        file('server').mkdir()
+        File eula = file('server/eula.txt')
+        eula.createNewFile()
+        eula.write('eula=true')
+    }
+}
+
+task setUpServer() {
+    doFirst {
+        println "set up the server..."
+    }
+    finalizedBy copyPlugins
+    finalizedBy copyServer
+    finalizedBy createEula
+}
+
+task serve {
+
+    dependsOn setUpServer
+
+    doLast {
+        def serverArgs = [new File("bin", mcServerFileName.toString())]
+        javaexec {
+            main "-jar"
+            workingDir serverDir
+            minHeapSize "512M"
+            maxHeapSize "2G"
+            args serverArgs
+            standardInput System.in
+        }
+    }
+}

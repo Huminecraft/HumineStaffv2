@@ -1,0 +1,16 @@
+name: HumineStaff
+main: humine.com.main.StaffMain
+author: SDAChess
+version: 2.0.1
+api-version: 1.14
+commands:
+  invsee:
+  endsee:
+  annonce:
+  vanish:
+  voteban:
+  automessage:
+  lien:
+  permission:
+  tpsmonitor:
+  upvote:
