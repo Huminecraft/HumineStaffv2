@@ -5,52 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd08a6c1-f034-4897-90a8-41c22a6326cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.3/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/fileContent/annotation-processors.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.5.1-20190724234647+0000/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/sda.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/HumineAYPI_2_0_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/spigot_1_14_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/banned-ips.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/banned-players.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/bukkit.yml" afterDir="false" />
@@ -135,37 +89,6 @@
       <change afterPath="$PROJECT_DIR$/server/world_the_end/level.dat_old" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/world_the_end/session.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/world_the_end/uid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/AnnonceCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/AutoMessageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/OpenEnderChestCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/OpenInventoryCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/OpenLienCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/TPSCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/UpvoteCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/VanishCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/permissions/PermissionCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/voteban/OpenVoteBanCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/commands/voteban/VoteBanCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/events/BreakDiamondBlockEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/events/FilterBlockInEnderChestEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/events/MessageJoinEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/events/MessageQuitEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/events/PlayerSleepEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/events/SaveEnderChestEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/events/SavePlayerInventoryEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/events/permissions/PermissionJoinEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/main/AutoMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/main/Check.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/main/FileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/main/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/main/StaffMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/main/VoteBan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/permissions/PermissionGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/humine/com/permissions/PermissionGroupManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="server/" />
@@ -251,20 +174,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
               <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -435,14 +349,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565639863625</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Premier commit de la version fonctionelle 2.0.0 de HumineStaff">
+      <created>1565640203086</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565640203086</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -457,7 +378,7 @@
       <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32938644" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.25618947" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32938644" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32938644" />
       <window_info anchor="bottom" id="Build" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
@@ -616,17 +537,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
