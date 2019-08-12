@@ -5,90 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd08a6c1-f034-4897-90a8-41c22a6326cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/banned-ips.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/banned-players.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/bukkit.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/commands.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/eula.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/help.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-10.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-11.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-12.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-2.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-3.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-4.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-5.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-6.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-7.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-8.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-11-9.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-12-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-12-2.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-12-3.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-12-4.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/2019-08-12-5.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/ops.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/permissions.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/Aypi/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/HumineStaff/AutoMessage.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/HumineStaff/EnderChest/Kenrede.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/HumineStaff/Group/user.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/HumineStaff/Inventory/Kenrede.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/HumineStaff/TPS.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/HumineStaff/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/HumineStaff/message.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/HumineStaff/prefix.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/HumineStaff/upvote.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/PluginMetrics/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/spigot.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/usercache.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/whitelist.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/advancements/adbe7e08-5892-496f-bd56-c18f107d5ef9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/data/raids.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/datapacks/bukkit/pack.mcmeta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/level.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/level.dat_old" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/playerdata/adbe7e08-5892-496f-bd56-c18f107d5ef9.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/poi/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/poi/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/poi/r.0.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/poi/r.0.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/region/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/region/r.-1.-2.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/region/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/region/r.0.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/region/r.0.-2.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/region/r.0.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/session.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/stats/adbe7e08-5892-496f-bd56-c18f107d5ef9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world/uid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/DIM-1/data/raids_nether.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/DIM-1/poi/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/DIM-1/poi/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/DIM-1/poi/r.0.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/DIM-1/poi/r.0.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/DIM-1/region/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/DIM-1/region/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/DIM-1/region/r.0.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/DIM-1/region/r.0.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/level.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/level.dat_old" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/session.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_nether/uid.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/DIM1/data/raids_end.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/DIM1/poi/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/DIM1/poi/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/DIM1/poi/r.0.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/DIM1/poi/r.0.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/DIM1/region/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/DIM1/region/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/DIM1/region/r.0.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/DIM1/region/r.0.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/level.dat_old" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/session.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/world_the_end/uid.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/world_the_end/level.dat" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="server/" />
@@ -178,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/src/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -274,6 +191,11 @@
             </path>
             <path>
               <item name="HumineStaff" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HumineStaff" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HumineStaff" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -356,12 +278,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565640203086</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Suppression de quelques parties serveurs restantes sur le git.">
+      <created>1565640455176</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565640455176</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1052" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -377,8 +305,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32938644" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.25618947" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32938644" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32938644" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32938644" />
       <window_info anchor="bottom" id="Build" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
@@ -417,7 +345,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Premier commit de la version fonctionelle 2.0.0 de HumineStaff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Premier commit de la version fonctionelle 2.0.0 de HumineStaff" />
+    <MESSAGE value="Suppression de quelques parties serveurs restantes sur le git." />
+    <option name="LAST_COMMIT_MESSAGE" value="Suppression de quelques parties serveurs restantes sur le git." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -547,7 +476,7 @@
     <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
