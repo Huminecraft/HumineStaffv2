@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="plugins">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/plugins/HumineAYPI-2.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/plugins/spigot-1.14.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/plugins/HumineStaff.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
