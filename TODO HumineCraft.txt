@@ -1,0 +1,15 @@
+Refaire les permissions du plugin : done 
+
+refaire la commande de voteban 
+	Intervalle de 5 mins entre les votebans 
+	Possibilité de cacher les voteban
+		Possibilité de le fermer définitivement
+		Possibilité de fermer un vote ban de manière ponctuelle
+
+vérifier les TPS fonctionne bien 
+
+faire le script de restart
+
+tester le lien qui fonctionne avec HumineShop
+	
+Elenver les joueurs en vanish de la player list

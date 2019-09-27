@@ -13,14 +13,15 @@ public class OpenVoteBanCommand implements CommandExecutor{
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		
 		if(args.length >= 2) {
-			String message = args[1];
+			StringBuilder message = new StringBuilder(" ");
+			for(int i = 1; i < args.length; i++)
+				message.append(args[i]).append(" ");
 			Player target = Bukkit.getPlayer(args[0]);
 			if(target != null) {
 				if(!StaffMain.getInstance().getVoteBan().isInProgress()) {
 					if(Bukkit.getOnlinePlayers().size() >= 5) {
-						voteban(target, message);
+						voteban(target, message.toString());
 						return true;
 					}
 					else
@@ -38,10 +39,10 @@ public class OpenVoteBanCommand implements CommandExecutor{
 		return false;
 	}
 
-	private void voteban(Player target, String message) {
+	private void voteban(Player target, String args) {
 		Bukkit.broadcastMessage(ChatColor.GOLD + "Un vote sur le banissement sur " + target.getName() + " est lancé !");
-		Bukkit.broadcastMessage("Raison: " + ChatColor.DARK_AQUA + message);
+		Bukkit.broadcastMessage("Raison: " + ChatColor.DARK_AQUA + args);
 		Bukkit.broadcastMessage("Êtes-vous d'accord ? §a/voteban yes§r ou §4/voteban no§r pour voter");
-		StaffMain.getInstance().getVoteBan().openVote(target, message.toString());
+		StaffMain.getInstance().getVoteBan().openVote(target, args);
 	}
 }
