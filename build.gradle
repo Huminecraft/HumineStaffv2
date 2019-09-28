@@ -19,7 +19,7 @@ jar {
 
 def pluginName = "HumineStaff"
 
-def mcServerVersion = "1.14.2"
+def mcServerVersion = "1.14.4"
 
 def mcServerFileName = "spigot-${mcServerVersion}.jar"
 def serverDir = "server"

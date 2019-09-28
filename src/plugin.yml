@@ -1,7 +1,7 @@
 name: HumineStaff
 main: humine.com.main.StaffMain
 author: SDAChess
-version: 2.0.1
+version: 2.1.1
 api-version: 1.14
 commands:
   invsee:

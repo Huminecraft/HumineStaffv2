@@ -1,11 +1,14 @@
 package humine.com.main;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
+import humine.com.commands.*;
+import humine.com.commands.permissions.PermissionCommand;
+import humine.com.commands.voteban.HideVoteBoardCommand;
+import humine.com.commands.voteban.OpenVoteBanCommand;
+import humine.com.commands.voteban.VoteBanCommand;
+import humine.com.events.*;
+import humine.com.events.permissions.PermissionJoinEvent;
+import humine.com.permissions.PermissionGroup;
+import humine.com.permissions.PermissionGroupManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
@@ -14,16 +17,13 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import humine.com.commands.*;
-import humine.com.commands.permissions.PermissionCommand;
-import humine.com.commands.voteban.OpenVoteBanCommand;
-import humine.com.commands.voteban.VoteBanCommand;
-import humine.com.events.*;
-import humine.com.events.permissions.PermissionJoinEvent;
-import humine.com.permissions.PermissionGroup;
-import humine.com.permissions.PermissionGroupManager;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
-public class StaffMain extends JavaPlugin{
+public class StaffMain extends JavaPlugin {
 
 	private static StaffMain instance;
 	
@@ -33,9 +33,6 @@ public class StaffMain extends JavaPlugin{
 	private PermissionGroupManager permissionGroupManager;
 	private List<String> PlayerInBed;
 
-
-
-	
 	@Override
 	public void onEnable() {
 		instance = this;
@@ -48,7 +45,6 @@ public class StaffMain extends JavaPlugin{
 			if(player.isSleeping())
 				this.PlayerInBed.add(player.getName());
 		}
-		
 		this.saveDefaultConfig();
 		FileManager.makeDeFaultConfiguration(this.getDataFolder());
 		try {
@@ -58,7 +54,7 @@ public class StaffMain extends JavaPlugin{
 		}
 		this.autoMessage.getOnFile(this.getDataFolder());
 		
-		initiliazePermission();
+		initializePermission();
 		initiliazeEvents();
 		initializeCommands();
 		TPSCommand.startTPSManager();
@@ -81,12 +77,12 @@ public class StaffMain extends JavaPlugin{
 		}
 	}
 	
-	private void initiliazePermission()
+	private void initializePermission()
 	{
 		File folder = new File(this.getDataFolder(), "Group");
 		File prefixFile = new File(this.getDataFolder(), "prefix.yml");
 		FileConfiguration config = YamlConfiguration.loadConfiguration(prefixFile);
-		
+
 		String name;
 		for(File file : Objects.requireNonNull(folder.listFiles())) {
 			name = file.getName();
@@ -137,6 +133,7 @@ public class StaffMain extends JavaPlugin{
 		Objects.requireNonNull(this.getCommand("vanish")).setExecutor(new VanishCommand());
 		Objects.requireNonNull(this.getCommand("voteban")).setExecutor(new OpenVoteBanCommand());
 		Objects.requireNonNull(this.getCommand("voteban")).setExecutor(new VoteBanCommand());
+		Objects.requireNonNull(this.getCommand("voteban")).setExecutor(new HideVoteBoardCommand());
 		Objects.requireNonNull(this.getCommand("automessage")).setExecutor(new AutoMessageCommand());
 		Objects.requireNonNull(this.getCommand("lien")).setExecutor(new OpenLienCommand());
 		Objects.requireNonNull(this.getCommand("permission")).setExecutor(new PermissionCommand());

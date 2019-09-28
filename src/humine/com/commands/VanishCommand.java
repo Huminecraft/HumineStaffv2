@@ -1,13 +1,12 @@
 package humine.com.commands;
 
+import humine.com.main.Message;
+import humine.com.main.StaffMain;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import humine.com.main.Message;
-import humine.com.main.StaffMain;
 
 public class VanishCommand implements CommandExecutor{
 
@@ -40,6 +39,7 @@ public class VanishCommand implements CommandExecutor{
 		String message = Message.getMessageQuit();
 		message = message.replace("{PLAYER}", player.getName());
 		Bukkit.broadcastMessage(message);
+		Bukkit.getOnlinePlayers().remove(player);
 	}
 	
 	private void unvanish(Player player)
@@ -53,5 +53,6 @@ public class VanishCommand implements CommandExecutor{
 		String message = Message.getMessageJoin();
 		message = message.replace("{PLAYER}", player.getName());
 		Bukkit.broadcastMessage(message);
+		Bukkit.getOnlinePlayers().remove(player);
 	}
 }

@@ -1,15 +1,15 @@
 Refaire les permissions du plugin : done 
 
 refaire la commande de voteban 
-	Intervalle de 5 mins entre les votebans 
-	Possibilité de cacher les voteban
-		Possibilité de le fermer définitivement
-		Possibilité de fermer un vote ban de manière ponctuelle
+	Intervalle de 5 mins entre les votebans : En cours 
+	Possibilité de cacher les voteban : En cours
+		Possibilité de le fermer définitivement : En cours
+		Possibilité de fermer un vote ban de manière ponctuelle : En cours
 
-vérifier les TPS fonctionne bien 
+vérifier les TPS fonctionne bien : done
 
-faire le script de restart
+faire le script de restart : à faire avec Hero
 
-tester le lien qui fonctionne avec HumineShop
+tester le lien qui fonctionne avec HumineShop : done
 	
-Elenver les joueurs en vanish de la player list
+Elenver les joueurs en vanish de la player list : done

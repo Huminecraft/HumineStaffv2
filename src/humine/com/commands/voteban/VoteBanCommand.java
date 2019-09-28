@@ -1,11 +1,10 @@
 package humine.com.commands.voteban;
 
+import humine.com.main.StaffMain;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import humine.com.main.StaffMain;
 
 public class VoteBanCommand implements CommandExecutor{
 
@@ -17,12 +16,14 @@ public class VoteBanCommand implements CommandExecutor{
 			if(args.length >= 1 && (args[0].equalsIgnoreCase("yes") || args[0].equalsIgnoreCase("no"))) {
 				if(!StaffMain.getInstance().getVoteBan().getParticipants().containsKey(player)) {
 					if(StaffMain.getInstance().getVoteBan().isInProgress()) {
-						if(args[0].equalsIgnoreCase("yes"))
+						if(args[0].equalsIgnoreCase("yes")) {
 							StaffMain.getInstance().getVoteBan().addParticipant(player, true);
-						else
+						}
+						else {
 							StaffMain.getInstance().getVoteBan().addParticipant(player, false);
-						
+						}
 						player.sendMessage("Merci d'avoir voté !");
+						StaffMain.getInstance().getVoteBan().getVoteBoard().update();
 						return true;
 					}
 					else
