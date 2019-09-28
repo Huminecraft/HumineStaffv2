@@ -9,9 +9,9 @@ import java.util.Objects;
 
 public class VoteBoard {
 
-    private VoteBan vb;
-    private Scoreboard voteBoard = Objects.requireNonNull(StaffMain.getInstance().getServer().getScoreboardManager()).getNewScoreboard();
-    private Objective objective;
+    private final VoteBan vb;
+    private final Scoreboard voteBoard = Objects.requireNonNull(StaffMain.getInstance().getServer().getScoreboardManager()).getNewScoreboard();
+    private final Objective objective;
 
 
     public VoteBoard(VoteBan vb) {

@@ -1,17 +1,16 @@
 package humine.com.main;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Objects;
-
+import com.aypi.utils.Timer;
+import com.aypi.utils.inter.TimerFinishListener;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import com.huminecraft.humineaypi.utils.Timer;
-import com.huminecraft.humineaypi.utils.inter.TimerFinishListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class AutoMessage {
 
@@ -19,7 +18,7 @@ public class AutoMessage {
 	private int delay;
 	private boolean loop;
 
-	public AutoMessage() {
+	AutoMessage() {
 		this.messages = new ArrayList<String>();
 		this.messages.add("TEST DEBUG MESSAGE AUTO !");
 		this.delay = 15;

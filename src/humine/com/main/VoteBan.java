@@ -1,7 +1,7 @@
 package humine.com.main;
 
-import com.huminecraft.humineaypi.utils.Timer;
-import com.huminecraft.humineaypi.utils.inter.TimerFinishListener;
+import com.aypi.utils.Timer;
+import com.aypi.utils.inter.TimerFinishListener;
 import humine.com.commands.voteban.VoteBoard;
 import org.bukkit.BanList.Type;
 import org.bukkit.Bukkit;
@@ -15,16 +15,16 @@ public class VoteBan {
 
 	private HashMap<Player, Boolean> participants;
 	private HashMap<Player, String> banished;
-	private Set<Player> immunized;
+	private final Set<Player> immunized;
 	private Player accuser;
 	private String reason;
 	private boolean inProgress;
 	private boolean recentVote;
-	private VoteBoard voteBoard;
-	private Set<Player> blinds;
+	private final VoteBoard voteBoard;
+	private final Set<Player> blinds;
 
 
-	public VoteBan() {
+	VoteBan() {
 		this.participants = new HashMap<Player, Boolean>();
 		this.banished = new HashMap<Player, String>();
 		this.accuser = null;

@@ -8,5 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="spigot-1.14.4" level="project" />
+    <orderEntry type="library" name="AYPI.V1.4.7" level="project" />
   </component>
 </module>

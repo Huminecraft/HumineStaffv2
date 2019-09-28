@@ -1,11 +1,9 @@
 package humine.com.main;
 
+import com.aypi.utils.Timer;
+import com.aypi.utils.inter.TimerFinishListener;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitRunnable;
-
-import com.huminecraft.humineaypi.utils.Timer;
-import com.huminecraft.humineaypi.utils.inter.TimerFinishListener;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -16,8 +14,8 @@ public class Check {
 
     private Player p;
     static Check instance;
-    private static int reward = FileManager.getUpvoteConfig("reward");
-    private static int delay = FileManager.getUpvoteConfig("delay");
+    private static final int reward = FileManager.getUpvoteConfig("reward");
+    private static final int delay = FileManager.getUpvoteConfig("delay");
 
     public static int getReward() {
         return reward;
@@ -37,7 +35,7 @@ public class Check {
         this.p = p;
     }
 
-    public Player getPlayer() {
+    private Player getPlayer() {
         return p;
     }
 
@@ -51,7 +49,7 @@ public class Check {
                             getPlayer().sendMessage("Vous avez été crédité de " + reward + " pixels");
                         } else {
                             p.sendMessage("Vous avez déjà voté ces dernières 24h ou vous n'avez pas voté assez rapidement.");
-                        };
+                        }
                     }
                 }, true);
         Check.start();
