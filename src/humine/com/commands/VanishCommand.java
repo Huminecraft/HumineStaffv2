@@ -39,7 +39,6 @@ public class VanishCommand implements CommandExecutor{
 		String message = Message.getMessageQuit();
 		message = message.replace("{PLAYER}", player.getName());
 		Bukkit.broadcastMessage(message);
-		Bukkit.getOnlinePlayers().remove(player);
 	}
 	
 	private void unvanish(Player player)
@@ -53,6 +52,5 @@ public class VanishCommand implements CommandExecutor{
 		String message = Message.getMessageJoin();
 		message = message.replace("{PLAYER}", player.getName());
 		Bukkit.broadcastMessage(message);
-		Bukkit.getOnlinePlayers().remove(player);
 	}
 }

@@ -2,176 +2,88 @@ package humine.com.main;
 
 import com.aypi.utils.Timer;
 import com.aypi.utils.inter.TimerFinishListener;
-import humine.com.commands.voteban.VoteBoard;
-import org.bukkit.BanList.Type;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
 
 public class VoteBan {
 
-	private HashMap<Player, Boolean> participants;
-	private HashMap<Player, String> banished;
-	private final Set<Player> immunized;
-	private Player accuser;
-	private String reason;
-	private boolean inProgress;
-	private boolean recentVote;
-	private final VoteBoard voteBoard;
-	private final Set<Player> blinds;
+    private ArrayList<Player> voters;
+    private Player target;
+    private int votebanDuration;
+    private ArrayList<Player> immuned;
+    private int votesFor;
+    private int votesAgainst;
+    private String reason;
+    private Player sender;
+    private VoteBoard voteBoard;
+
+    public VoteBan(Player sender, Player target, String reason) {
+        this.sender = sender;
+        this.target = target;
+        this.reason = reason;
+        this.voteBoard = new VoteBoard(this);
+
+    }
+
+    public VoteBoard getVoteBoard() {
+        return voteBoard;
+    }
+
+    public void addForVote(){
+        this.votesFor +=1;
+    }
+
+    public boolean isImmuned(Player player){
+        return this.immuned.contains(player);
+    }
+
+    public void setImmuned(Player player){
+        this.immuned.add(player);
+    }
+
+    public void setVoters(Player player){
+        this.voters.add(player);
+    }
+
+    public void setTarget(Player player){
+        this.target = player;
+    }
+
+    public void startVoteBan(){
+        Timer voteBan = new Timer(StaffMain.getInstance(), 30, new TimerFinishListener() {
+            @Override
+            public void execute() {
+                if (pollResult()){
+                    target.kickPlayer("Vous avez été ban par le voteban.");
+                }
+            }
+        });
+    }
 
 
-	VoteBan() {
-		this.participants = new HashMap<Player, Boolean>();
-		this.banished = new HashMap<Player, String>();
-		this.accuser = null;
-		this.reason = "";
-		this.inProgress = false;
-		this.immunized = new HashSet<Player>();
-		this.voteBoard = new VoteBoard(StaffMain.getInstance().getVoteBan());
-		this.blinds = new HashSet<Player>();
-	}
-	
-	public void openVote(Player accuser, String reason) {
-		this.accuser = accuser;
-		this.reason = reason;
-		this.inProgress = true;
-		this.voteBoard.update();
-		Timer timer = new Timer(StaffMain.getInstance(), 30, new TimerFinishListener() {
-			@Override
-			public void execute() {
-				inProgress = false;
-				float percentage = (float) (((float) getNumberOfPersonFor() * 100.0) / (float) Bukkit.getOnlinePlayers().size());
-				judgement(percentage);
-			}
-		});
-		
-		timer.start();
-	}
 
+    public void executeBan(Player player){
+        player.kickPlayer("Vous avez été banni par le vote.");
+    }
 
-	
-	private void judgement(float percentage) {
-		if(percentage >= 75.0) {
-			Bukkit.getBanList(Type.NAME).addBan(this.accuser.getName(), this.reason, null, "Vote Ban");
-			this.accuser.kickPlayer(this.reason);
-			Bukkit.broadcastMessage("Le joueur a été banni du serveur par le peuple");
-		}
-		else
-		{
-			Bukkit.broadcastMessage("Le joueur n'a pas etait banni du serveur par le peuple");
-			immunized.add(accuser);
-			Timer remover = new Timer(StaffMain.getInstance(), 600, new TimerFinishListener() {
-				@Override
-				public void execute() {
-					immunized.remove(accuser);
-				}
-			});
-		}
-		for(Player p : Bukkit.getOnlinePlayers()){
-			StaffMain.getInstance().getVoteBan().getVoteBoard().dissocier(p);
-		}
-		recentVote = true;
-		Timer recentVoteTimer = new Timer(StaffMain.getInstance(), 300, new TimerFinishListener() {
-			@Override
-			public void execute() {
-				recentVote = false;
-			}
-		});
-	}
+    public boolean pollResult(){
+        return ((double) this.votesFor/(this.votesFor+this.votesAgainst)) >= 0.75;
+    }
 
+    public Player getTarget() {
+        return target;
+    }
 
-	public int getNumberOfPersonFor() {
-		int number = 0;
-		for(boolean choose : this.participants.values()) {
-			if(choose)
-				number += 1;
-		}
-		
-		return number;
-	}
-	
-	public int getNumberOfPersonAgainst() {
-		int number = 0;
-		for(boolean choose : this.participants.values()) {
-			if(!choose)
-				number += 1;
-		}
-		
-		return number;
-	}
-	
-	public void addParticipant(Player player, boolean choose) {
-		this.participants.put(player, choose);
-	}
+    public int getVotesFor() {
+        return votesFor;
+    }
 
-	public HashMap<Player, Boolean> getParticipants() {
-		return participants;
-	}
+    public int getVotesAgainst() {
+        return votesAgainst;
+    }
 
-	public void setParticipants(HashMap<Player, Boolean> participants) {
-		this.participants = participants;
-	}
-
-	public HashMap<Player, String> getBanished() {
-		return banished;
-	}
-
-	public void setBanished(HashMap<Player, String> banished) {
-		this.banished = banished;
-	}
-
-	public Player getAccuser() {
-		return accuser;
-	}
-
-	public void setAccuser(Player accuser) {
-		this.accuser = accuser;
-	}
-
-	public String getReason() {
-		return reason;
-	}
-
-	public void setReason(String reason) {
-		this.reason = reason;
-	}
-
-	public boolean isInProgress() {
-		return inProgress;
-	}
-
-	public void setInProgress(boolean inProgress) {
-		this.inProgress = inProgress;
-	}
-
-	public boolean isProtected(Player player){
-		return (player.hasPermission("huminestaff.admin.unbannable") || this.immunized.contains(player));
-	}
-
-	public boolean isRecentVote() {
-		return recentVote;
-	}
-
-	public void setRecentVote(boolean recentVote) {
-		this.recentVote = recentVote;
-	}
-
-	public VoteBoard getVoteBoard(){
-		return voteBoard;
-	}
-	public Set getBlinds(){
-		return blinds;
-	}
-
-	public void addBlinds(Player player){
-		blinds.add(player);
-	}
-
-	public void removeBlinds(Player player){
-		blinds.remove(player);
-	}
+    public int getVotebanDuration() {
+        return votebanDuration;
+    }
 }

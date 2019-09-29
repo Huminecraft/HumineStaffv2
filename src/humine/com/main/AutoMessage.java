@@ -89,8 +89,9 @@ public class AutoMessage {
 	
 	public void save(File folder) throws IOException {
 		File file = new File(folder, "AutoMessage.yml");
-		if(!file.exists())
+		if(!file.exists()) {
 			file.createNewFile();
+		}
 		
 		FileConfiguration config = YamlConfiguration.loadConfiguration(file);
 		

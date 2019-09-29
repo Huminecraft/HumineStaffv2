@@ -2,7 +2,6 @@ package humine.com.main;
 
 import humine.com.commands.*;
 import humine.com.commands.permissions.PermissionCommand;
-import humine.com.commands.voteban.HideVoteBoardCommand;
 import humine.com.commands.voteban.OpenVoteBanCommand;
 import humine.com.commands.voteban.VoteBanCommand;
 import humine.com.events.*;
@@ -29,16 +28,17 @@ public class StaffMain extends JavaPlugin {
 	
 	private ArrayList<Player> vanished;
 	private AutoMessage autoMessage;
-	private VoteBan voteBan;
 	private PermissionGroupManager permissionGroupManager;
 	private List<String> PlayerInBed;
+	private VoteBan voteBan;
+	private VoteBoard voteBoard;
 
 	@Override
 	public void onEnable() {
 		instance = this;
+		this.voteBan = null;
 		this.vanished = new ArrayList<Player>();
 		this.autoMessage = new AutoMessage();
-		this.voteBan = new VoteBan();
 		this.permissionGroupManager = new PermissionGroupManager();
 		this.PlayerInBed = new ArrayList<String>();
 		for(Player player : Bukkit.getOnlinePlayers()) {
@@ -60,7 +60,6 @@ public class StaffMain extends JavaPlugin {
 		TPSCommand.startTPSManager();
 	}
 	
-	@Override
 	public void onDisable() {
 		try {
 			this.autoMessage.save(this.getDataFolder());
@@ -131,14 +130,13 @@ public class StaffMain extends JavaPlugin {
 		Objects.requireNonNull(this.getCommand("endsee")).setExecutor(new OpenEnderChestCommand());
 		Objects.requireNonNull(this.getCommand("annonce")).setExecutor(new AnnonceCommand());
 		Objects.requireNonNull(this.getCommand("vanish")).setExecutor(new VanishCommand());
-		Objects.requireNonNull(this.getCommand("voteban")).setExecutor(new OpenVoteBanCommand());
-		Objects.requireNonNull(this.getCommand("voteban")).setExecutor(new VoteBanCommand());
-		Objects.requireNonNull(this.getCommand("voteban")).setExecutor(new HideVoteBoardCommand());
 		Objects.requireNonNull(this.getCommand("automessage")).setExecutor(new AutoMessageCommand());
 		Objects.requireNonNull(this.getCommand("lien")).setExecutor(new OpenLienCommand());
 		Objects.requireNonNull(this.getCommand("permission")).setExecutor(new PermissionCommand());
 		Objects.requireNonNull(this.getCommand("tpsmonitor")).setExecutor(new TPSCommand());
 		Objects.requireNonNull(this.getCommand("upvote")).setExecutor(new UpvoteCommand());
+		Objects.requireNonNull(this.getCommand("voteban")).setExecutor(new OpenVoteBanCommand());
+		Objects.requireNonNull(this.getCommand("vote")).setExecutor(new VoteBanCommand());
 	}
 	
 	
@@ -162,13 +160,6 @@ public class StaffMain extends JavaPlugin {
 		return autoMessage;
 	}
 
-	public VoteBan getVoteBan() {
-		return voteBan;
-	}
-
-	public void setVoteBan(VoteBan voteBan) {
-		this.voteBan = voteBan;
-	}
 
 	public PermissionGroupManager getPermissionGroupManager()
 	{
@@ -188,4 +179,11 @@ public class StaffMain extends JavaPlugin {
 		PlayerInBed = playerInBed;
 	}
 
+	public VoteBan getVoteBan() {
+		return voteBan;
+	}
+
+	public void setVoteBan(VoteBan voteBan) {
+		this.voteBan = voteBan;
+	}
 }
