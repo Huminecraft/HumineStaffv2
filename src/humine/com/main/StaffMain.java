@@ -186,4 +186,5 @@ public class StaffMain extends JavaPlugin {
 	public void setVoteBan(VoteBan voteBan) {
 		this.voteBan = voteBan;
 	}
+
 }

@@ -25,9 +25,14 @@ public class OpenVoteBanCommand implements CommandExecutor {
             return false;
         }
 
+        if (StaffMain.getInstance().getVoteBan().isImmunised(target)){
+            commandSender.sendMessage("Ce joueur n'est pas éligible au voteban ou viens d'y échapper.");
+            return false;
+        }
+
         String message = "";
         for (int i=1; i < args.length; i++){
-            message += args[i];
+            message += " " + args[i];
         }
 
         VoteBan voteBan = new VoteBan((Player) commandSender, target, message);

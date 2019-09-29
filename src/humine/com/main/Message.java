@@ -1,10 +1,10 @@
 package humine.com.main;
 
-import java.io.File;
-import java.io.IOException;
-
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+
+import java.io.File;
+import java.io.IOException;
 
 
 public abstract class Message {
@@ -22,7 +22,7 @@ public abstract class Message {
 		FileConfiguration config = YamlConfiguration.loadConfiguration(file);
 		
 		if(!config.contains("quit"))
-			config.set("quit", "{PLAYER} a quitter la partie");
+			config.set("quit", "{PLAYER} a quitté la partie");
 		
 		if(!config.contains("join"))
 			config.set("join", "{PLAYER} a rejoint la partie");

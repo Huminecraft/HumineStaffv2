@@ -4,6 +4,7 @@ import humine.com.main.StaffMain;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 
 public class VoteBanCommand implements CommandExecutor {
@@ -25,8 +26,10 @@ public class VoteBanCommand implements CommandExecutor {
 
         if (args[0].equalsIgnoreCase("yes")){
             StaffMain.getInstance().getVoteBan().addForVote();
+            StaffMain.getInstance().getVoteBan().setVoters((Player) commandSender, "Yes");
         } else if (args[0].equalsIgnoreCase("no")){
             StaffMain.getInstance().getVoteBan().addForVote();
+            StaffMain.getInstance().getVoteBan().setVoters((Player) commandSender, "No");
         } else {
             commandSender.sendMessage("Arguement Invalide");
             return false;
